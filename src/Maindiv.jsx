@@ -78,7 +78,7 @@ function Maindiv() {
                 <div className="title-div">
                   <p className="title">{note.title}</p>
                   <img
-                    src="./public/trash-bin.png"
+                    src={trashImg}
                     className="trash"
                     onClick={(e) => deleteNotes(e, index)}
                   ></img>
