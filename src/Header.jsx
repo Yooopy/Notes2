@@ -15,7 +15,7 @@ function Header() {
       <img
         onClick={() => changeAside()}
         className="menu-img"
-        src="./src/assets/menu.png"
+        src="./public/menu.png"
       ></img>
 
       <div className="header">

@@ -53,17 +53,17 @@ function Maindiv() {
           <section
             onClick={() => window.open("https://yooopy.github.io/Notes")}
           >
-            <img src="./src/assets/notes.png"></img>notes v1
+            <img src="./public/notes.png"></img>notes v1
           </section>
 
           <section onClick={() => window.open("https://github.com/yooopy/")}>
-            <img src="./src/assets/github.png"></img>Github
+            <img src="./public/github.png"></img>Github
           </section>
           <section
             id="home"
             onClick={() => window.open("https://yooopy.github.io/")}
           >
-            <img src="./src/assets/home.png"></img>Home Website
+            <img src="./public/home.png"></img>Home Website
           </section>
         </aside>
         <article className="main-art">
@@ -73,7 +73,7 @@ function Maindiv() {
                 <div className="title-div">
                   <p className="title">{note.title}</p>
                   <img
-                    src="./src/assets/trash-bin.png"
+                    src="./public/trash-bin.png"
                     className="trash"
                     onClick={(e) => deleteNotes(e, index)}
                   ></img>
