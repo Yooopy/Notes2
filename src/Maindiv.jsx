@@ -1,3 +1,6 @@
+// localStorage.clear();
+import topImg from "/src/assets/top.png";
+import bottomImg from "/src/assets/bottom.png";
 import trashImg from "/src/assets/trash-bin.png";
 import homeImg from "/src/assets/home.png";
 import noteImg from "/src/assets/notes.png";
@@ -40,6 +43,33 @@ function Maindiv() {
     localStorage.setItem("notes", JSON.stringify(newNotes));
   };
 
+  const moveUp = (e, index) => {
+    if (index === 0) return;
+
+    const newNotes = [...notes];
+    const temp = newNotes[index];
+    newNotes[index] = newNotes[index - 1];
+    newNotes[index - 1] = temp;
+    setNotes(newNotes);
+    localStorage.setItem("notes", JSON.stringify(newNotes));
+
+    // const newNotes = [...notes];
+    // const temp = newNotes[index];
+    // newNotes[index] = newNotes[index - 1];
+    // newNotes[index - 1] = temp;
+    // setNotes(newNotes);
+    // localStorage.setItem("notes", JSON.stringify(newNotes));
+  };
+  const moveDown = (e, index) => {
+    if (index === notes.length - 1) return;
+    const newNotes = [...notes];
+    const temp = newNotes[index];
+    newNotes[index] = newNotes[index + 1];
+    newNotes[index + 1] = temp;
+    setNotes(newNotes);
+    localStorage.setItem("notes", JSON.stringify(newNotes));
+  };
+
   return (
     <>
       <button
@@ -77,11 +107,23 @@ function Maindiv() {
               <div key={index} className="note">
                 <div className="title-div">
                   <p className="title">{note.title}</p>
-                  <img
-                    src={trashImg}
-                    className="trash"
-                    onClick={(e) => deleteNotes(e, index)}
-                  ></img>
+                  <div className="side-note-div">
+                    <img
+                      className="top-bot"
+                      src={topImg}
+                      onClick={(e) => moveUp(e, index)}
+                    ></img>
+                    <img
+                      className="top-bot"
+                      src={bottomImg}
+                      onClick={(e) => moveDown(e, index)}
+                    ></img>
+                    <img
+                      src={trashImg}
+                      className="trash"
+                      onClick={(e) => deleteNotes(e, index)}
+                    ></img>
+                  </div>
                 </div>
                 <pre className="subtitle">{note.text}</pre>
               </div>

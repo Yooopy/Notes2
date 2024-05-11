@@ -96,6 +96,10 @@
   /* color: ; */
   height: fit-content;
   box-shadow: 0px 2px 15px #19191974;
+  transition: all 0.2s ease;
+}
+.note:hover {
+  background-color: #303030;
 }
 .note pre {
   /* background-color: red; */
@@ -123,7 +127,11 @@
 .trash {
   height: 20px;
   width: 20px;
-  margin-left: auto;
+  /* margin-left: auto; */
+  transition: all 0.2s ease;
+}
+.trash:hover {
+  filter: hue-rotate(85deg) contrast(2);
 }
 .trash:hover {
   cursor: pointer;
@@ -203,4 +211,34 @@ aside section:hover {
 
 body {
   overflow: hidden;
+}
+
+.top-bot {
+  /* margin-left: 65%; */
+  /* margin-right: ; */
+  display: flex;
+  width: fit-content;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.top-bot:hover {
+  scale: 1.1;
+  filter: hue-rotate(40deg) contrast(2);
+}
+#b-arrow {
+  /* display: none; */
+  width: 33px;
+  height: 35px;
+}
+
+.side-note-div {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  /* width: 100%; */
+  width: 100%;
+  /* margin-left: auto; */
+  /* padding: 10px; */
 }
