@@ -1,3 +1,4 @@
+import menuImg from "/src/assets/menu.png";
 import "./Header.css";
 function Header() {
   let asideState = false;
@@ -15,7 +16,7 @@ function Header() {
       <img
         onClick={() => changeAside()}
         className="menu-img"
-        src="./public/menu.png"
+        src={menuImg}
       ></img>
 
       <div className="header">

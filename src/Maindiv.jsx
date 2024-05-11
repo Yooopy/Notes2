@@ -1,3 +1,8 @@
+import trashImg from "/src/assets/trash-bin.png";
+import homeImg from "/src/assets/home.png";
+import noteImg from "/src/assets/notes.png";
+import gitImg from "/src/assets/github.png";
+
 import { useState } from "react";
 import "./Maindiv.css";
 
@@ -53,17 +58,17 @@ function Maindiv() {
           <section
             onClick={() => window.open("https://yooopy.github.io/Notes")}
           >
-            <img src="./public/notes.png"></img>notes v1
+            <img src={noteImg}></img>notes v1
           </section>
 
           <section onClick={() => window.open("https://github.com/yooopy/")}>
-            <img src="./public/github.png"></img>Github
+            <img src={gitImg}></img>Github
           </section>
           <section
             id="home"
             onClick={() => window.open("https://yooopy.github.io/")}
           >
-            <img src="./public/home.png"></img>Home Website
+            <img src={homeImg}></img>Home Website
           </section>
         </aside>
         <article className="main-art">
