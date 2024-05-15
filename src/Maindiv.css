@@ -122,6 +122,11 @@
   color: #be97c6;
   font-size: large;
   font-weight: 630;
+  /* flex-grow: 1; */
+}
+.title-div .title {
+  /* background-color: red; */
+  width: 100%;
 }
 
 .trash {
@@ -238,7 +243,7 @@ body {
   align-items: center;
   justify-content: end;
   /* width: 100%; */
-  width: 100%;
+  width: fit-content;
   /* margin-left: auto; */
   /* padding: 10px; */
 }
